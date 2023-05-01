@@ -1,9 +1,10 @@
 package t2023501.test02;
 
+//날짜 클래스 Day(ver.1)
 public class Day {
-	private int year = 1;
-	private int month = 1;
-	private int date = 1;
+	private int year = 1;	// 년 
+	private int month = 1;	// 월
+	private int date = 1;	// 일
 
 	// --- 생성자 ---//
 	public Day() {
@@ -28,36 +29,36 @@ public class Day {
 	}
 
 	// --- 년, 월, 일 불러오기 ---//
-	private int getYear() {
+	private int getYear() {			// 년 불러오기
 		return year;
 	}
 
-	private int getMonth() {
+	private int getMonth() {		// 월 불러오기
 		return month;
 	}
 
-	private int getDate() {
+	private int getDate() {			// 일 불러오기
 		return date;
 	}
 
 	// --- 년, 월, 일 설정 ---//
 
-	public void setYear(int year) {
+	public void setYear(int year) {		// 년 설정
 		this.year = year;
 	}
 
-	public void setMonth(int month) {
+	public void setMonth(int month) {	// 월 설정
 		this.month = month;
 	}
 
-	public void setDate(int date) {
+	public void setDate(int date) {		// 일 설정
 		this.date = date;
 	}
 
 	// --- 요일 찾기 ---//
-	public int dayOfWeek() {
-		int y = year;
-		int m = month;
+	public int dayOfWeek() {			// 년,월,일 설정
+		int y = year;		// 년
+		int m = month;		// 월
 		if (m == 1 || m == 2) {
 			y--;
 			m += 12;

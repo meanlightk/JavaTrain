@@ -1,6 +1,6 @@
 package t2023501.test01;
 
-//사람 클래스(ver.2)
+//사람 클래스
 public class Human {
 
 	private String name;

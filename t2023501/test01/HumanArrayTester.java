@@ -1,5 +1,6 @@
 package t2023501.test01;
 
+// 사람 클래스의 인스턴스 배열
 import java.util.Scanner;
 
 public class HumanArrayTester {
