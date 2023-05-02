@@ -1,12 +1,14 @@
 package t2023501.test03;
 
+import t2023501.test02.Day;
+
 // 은행 계좌 클래스(ver.1)
 public class Account {
 
 	private String name; // 계좌 명의
 	private String no; // 계좌 번호
 	private long balance; // 예금 잔고
-	private String Day;
+	private Day day;
 
 	// --- 생성자 ---//
 	Account(String n, String num, long z) {
@@ -15,7 +17,12 @@ public class Account {
 		balance = z; // 예금 잔고
 	}
 
-//--- 계좌 명의 확인 ---//
+	public Account(String string, String string2, long balance2, Day d) {
+		this(string, string2, balance2);
+		this.day = d;
+	}
+
+	// --- 계좌 명의 확인 ---//
 	String getName() {
 		return name;
 	}
@@ -40,4 +47,9 @@ public class Account {
 		balance -= k;
 
 	}
+
+	public Day getOpenDay() {
+		return this.day;
+	}
+	
 }

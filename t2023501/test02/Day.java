@@ -77,4 +77,8 @@ public class Day {
 		return String.format("%04d년 %02d월 %02d일(%s)", year, month, date, wd[dayOfWeek()]);
 
 	}
+
+	public void set(int i, int j, int k) {
+		
+	}
 }

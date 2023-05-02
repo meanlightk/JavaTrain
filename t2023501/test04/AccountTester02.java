@@ -31,7 +31,7 @@ public class AccountTester02 {
 		Account a = new Account(name, no, balance, new Day(y, m, d));
 
 		System.out.println("계좌 기본 정보:" + a);
-		System.out.println("개설일:" + a.getOpneDay().toString());
+		System.out.println("개설일:" + a.getOpenDay().toString());
 	}
 
 }

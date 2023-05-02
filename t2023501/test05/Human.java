@@ -1,37 +1,65 @@
 package t2023501.test05;
 
+import t2023501.test02.Day;
+
 //사람 클래스(ver.3)
 public class Human {
 
-	private String name;	// 이름
-	private int height;		// 신장
-	private int weight;		// 체중
-	private Day birthday;	// 생일
+	private String name; // 이름
+	private int height; // 신장
+	private int weight; // 체중
+	private Day birthday; // 생일
 
 	// --- 생성자 ---//
-	Human(String name, int height, int weight, Day birthday) {
-		name = n;
-		height = h;
-		weight = w;
+	public Human(String name, int height, int weight, Day birthday) {
+		this.name  = name;
+		this.height = height;
+		this.weight = weight;
+		this.birthday = new Day(birthday);
+		
 	}
+		public String getName() { return name;}
+		public int getHeight() { return height;}
+		public int getWeight() { return weight;}
 
-	String getName() {
-		return name;
-	}
+		public Day getBirthday() {
+			return new Day(birthday);}
+		
 
-	int getHeight() {
-		return height;
-	}
-
-	int getWeight() {
-		return weight;
-	}
-
-	void gainWeight(int w) {		// 살이 찐다
+	public void gainWeight1(int w) {
 		weight += w;
 	}
 
-	void reduceWeight(int w) {		// 살이 빠진다
+	public void reduceWeight1(int w) {
 		weight -= w;
 	}
+
+	// ---
+	String getName1() {
+		return name;
+	}
+
+	int getHeight1() {
+		return height;
+	}
+
+	int getWeight1() {
+		return weight;
+	}
+
+	void gainWeight(int w) { // 살이 찐다
+		weight += w;
+	}
+
+	void reduceWeight(int w) { // 살이 빠진다
+		weight -= w;
+	}
+
+	// --- 데이터 표시 ---//
+	public void putData() {
+		System.out.println("이름:" + name);
+		System.out.println("신장:" + height + "cm");
+		System.out.println("체중:" + weight + "kg");
+	}
+
 }
