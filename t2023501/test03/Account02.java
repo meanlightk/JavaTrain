@@ -1,6 +1,6 @@
 package t2023501.test03;
 
-// 은행 계좌 클래서 (ver.2)
+// 은행 계좌 클래스 (ver.2)
 import t2023501.test02.Day;
 
 public class Account02 {
@@ -33,7 +33,7 @@ public class Account02 {
 		return balance;
 	}
 
-//---계좌 개설일 확인---//
+	//---계좌 개설일 확인---//
 	public Day getOpenday() {
 		return new Day(openDay);
 	}
@@ -43,12 +43,12 @@ public class Account02 {
 		balance += k;
 	}
 
-//---k원 출금---//
+	//---k원 출금---//
 	void withdraw(long k) {
 		balance -= k;
 	}
 
-//---문자열 표현에 의한 계좌 기본 정보 반환---//
+	//---문자열 표현에 의한 계좌 기본 정보 반환---//
 	public String tostString() {
 		return "{" + name + ", " + no + ", " + balance + "}";
 	}
