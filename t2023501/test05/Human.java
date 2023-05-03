@@ -12,19 +12,28 @@ public class Human {
 
 	// --- 생성자 ---//
 	public Human(String name, int height, int weight, Day birthday) {
-		this.name  = name;
+		this.name = name;
 		this.height = height;
 		this.weight = weight;
 		this.birthday = new Day(birthday);
-		
-	}
-		public String getName() { return name;}
-		public int getHeight() { return height;}
-		public int getWeight() { return weight;}
 
-		public Day getBirthday() {
-			return new Day(birthday);}
-		
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public int getWeight() {
+		return weight;
+	}
+
+	public Day getBirthday() {
+		return new Day(birthday);
+	}
 
 	public void gainWeight1(int w) {
 		weight += w;
@@ -62,4 +71,9 @@ public class Human {
 		System.out.println("체중:" + weight + "kg");
 	}
 
+	// --- 문자열화 ---//
+	public String tostString() {
+		return "{" + name + ": " + height + "cm" + weight + "kg " + birthday + "출생}";
+
+	}
 }
