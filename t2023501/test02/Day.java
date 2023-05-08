@@ -66,6 +66,7 @@ public class Day {
 		return (y + y / 4 - y / 100 + y / 400 + (12 * m + 8) / 5 + date) % 7;
 	}
 
+	//--- 날짜 d와 같은가? ---//
 	public boolean equalTo(Day d) {
 		return year == d.year && month == d.month && date == d.date;
 

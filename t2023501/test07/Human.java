@@ -1,6 +1,6 @@
 package t2023501.test07;
 
-// 사람 클래스 (ver4)
+// 사람 클래스 (ver.4)
 public class Human {
 
 	private static int counter = 0; // 몇 번까지 식별 번호를 부여했는가
