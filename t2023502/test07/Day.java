@@ -56,10 +56,10 @@ public class Day {
 	}
 
 	// --- 생성자 (year년 month월 date일)
-	public Day(int year, int month, int date) {
-		this(year, month);
-		this.date = adjustedMonth(year, this.month, date);
-	}
+	//public Day(int year, int month, int date) {
+		//this(year, month);
+		//this.date = adjustedMonth(year, this.month, date);
+	//}
 
 	// --- 생성자 (d와 같은 날짜) ---//
 	public Day(Day d) {
