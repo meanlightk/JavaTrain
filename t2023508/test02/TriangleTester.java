@@ -1,7 +1,11 @@
-package t2023508;
+package t2023508.test02;
 
 // 직각 이등변 삼각형 클래스군의 테스트 프로그램
 import java.util.Scanner;
+
+import t2023508.test01.AbstTriangle;
+import t2023508.test01.TriangleLB;
+import t2023508.test01.TriangleLU;
 
 
 

@@ -1,6 +1,8 @@
-package t2023508;
+package t2023508.test01;
 
 import java.awt.geom.RectangularShape;
+
+import t2023508.test02.Shape;
 
 /**
  * AbstTriangle 클래스는 직각 이등변 삼각형을 나타내는 추상 클래스이다. 이 클래스는 도형을 나타내는 추상 클래스 Shape로 부터
@@ -208,7 +210,7 @@ public class TriangleLU extends AbstTriangle {
 		 * 
 		 * @param length 생성할 이등변 삼각형의 한 변의 길이
 		 */
-		
+
 		public TriangleRU(int length) {
 			super(length);
 
