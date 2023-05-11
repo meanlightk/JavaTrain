@@ -1,7 +1,5 @@
 package t2023502.test08;
 
-import java.util.Objects;
-
 // 날짜 클래스 Day(ver.1)
 public class Day {
 	private int year = 1; // 년
@@ -9,14 +7,28 @@ public class Day {
 	private int date = 1; // 일
 
 	// --- 생성자 ---//
-	public Day(int year, int month, int date) {
-		super();
+	public Day() {
+	}
+
+	public Day(int year) {
 		this.year = year;
+	}
+
+	public Day(int year, int month) {
+		this(year);
 		this.month = month;
+	}
+
+	public Day(int year, int month, int date) {
+		this(year, month);
 		this.date = date;
 	}
 
-//--- 년, 월, 일 불러오기 ---//
+	public Day(Day d) {
+		this(d.year, d.month, d.date);
+	}
+
+	// --- 년, 월, 일 불러오기 ---//
 	public int getYear() {
 		return year;
 	}
@@ -29,7 +41,8 @@ public class Day {
 		return date;
 	}
 
-//--- 년,월,일 설정 ---//
+	// --- 년,월,일 설정 ---//
+
 	public void setYear(int year) {
 		this.year = year;
 	}
@@ -42,30 +55,34 @@ public class Day {
 		this.date = date;
 	}
 
+	public void set(int year, int month, int date) {
+		this.year = year;
+		this.month = month;
+		this.date = date;
+	}
+
 	// --- 요일 찾기 ---//
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(date, month, year);
+	public int dayOfweek() {
+		int y = year;
+		int m = month;
+		if (m == 1 || m == 2) {
+			y--;
+			m += 12;
+		}
+		return (y + y / 4 - y / 100 - y - 400 + (13 * m + 8) / 5 + date) % 7;
+
 	}
 
 	// --- 날짜 d와 같은가? ---//
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Day other = (Day) obj;
-		return date == other.date && month == other.month && year == other.year;
+	public boolean equalTo(Day d) {
+		return year == d.year && month == d.month && date == d.date;
 	}
 
 	// --- 문자열 표현 반환 ---//
-	@Override
 	public String toString() {
-		return "Day [year=" + year + ", month=" + month + ", date=" + date + "]";
+		String[] wd = { "일", "월", "화", "수", "목", "금", "토" };
+		return String.format("%04d년, %02ddnjf, %02d일(%s)", year, month, date, wd[dayOfweek()]);
 	}
 
 }
